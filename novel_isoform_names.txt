@@ -1,0 +1,11 @@
+Knuth's multiplicative hash
+hash(v) = v * 2654435761 % 2^32
+The seemingly arbitrary number is picked because it shares no common factors with 2^32.
+
+
+
+Locality-sensitive hashing
+similar inputs have a higher probability of collision
+https://stackoverflow.com/questions/12952729/how-to-understand-locality-sensitive-hashing
+
+
