@@ -1,0 +1,13 @@
+paolo carnevali single cell locality-sensitive hashing talk
+cell similarity is typically measured with the pearson correlation coefficient
+cluster cells by doing all by all similarity comparisons. computation for each pair is in time proportional to total # of nonzero expr vector entries
+LSH - probabilistic approach to finding pairs of similar objects in a large set. similar objects will hash the same bucket with higher probability. 
+jaccard similarity (minhash) between 2 webpages - intersection of words divided by the union
+the probability that two vectors in n-dimensional space lie on the same side of a hyperplane is 1-theta/pi. it's linearly related to the angle between the two vectors, theta.
+r(x,y) = cos(theta)
+^ him saying the correlation is cosine-like, unbiased for large m (# hyperplanes), sd independent of # genes and decreases when m increases, distribution becomes gaussian at large m
+his algo:
+1. randomly pick m random vectors (unit, random direction), each defining a hyperplane orthogonal to it
+2. for each cell, do some computation with shifted expr vector and each m random vectors
+3. do stuff with the result of htat computation that gives you the number of hyperplanes k for which the two cells are on the same plane. similarity now is r = cos(theta) where theta = pi(1-k/m)
+reducing each cell's expr vectors dimensionality to a signature of m dimensions

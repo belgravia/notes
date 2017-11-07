@@ -1,11 +1,11 @@
 Knuth's multiplicative hash
 hash(v) = v * 2654435761 % 2^32
-The seemingly arbitrary number is picked because it shares no common factors with 2^32.
-
-
+The seemingly arbitrary number is picked because it shares no common factors with 2^32. Called the golden ratio.
 
 Locality-sensitive hashing
 similar inputs have a higher probability of collision
 https://stackoverflow.com/questions/12952729/how-to-understand-locality-sensitive-hashing
 
+Needs to be reversible. Could store only the difference between positions. Since we're aiming for human-readable names, exisiting hash functions would not take biologists' concerns into account.
 
+Also, idea has been scratched. We should not try to encode information into names, however cool it may sound.
